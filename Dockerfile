@@ -5,7 +5,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN apk add build-base libffi-dev shadow sudo
+RUN \
+  apk update && \  
+  apk add build-base libffi-dev shadow sudo postgresql-client postgresql-dev gcc python3-dev musl-dev
 
 RUN \
   useradd -u 911 -U -s /bin/false abc && \
