@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    server:
+        image: dailynotes:latest
+        #        build: .
+        ports:
+            - 5000:5000
+        volumes:
+            - /acheron/AppData/dailynotes:/app/config
+        env_file: .env
+
