@@ -266,6 +266,7 @@ def get_date():
   }
 
   date_enc = aes_encrypt(date)
+  print(f"DATE: {date_enc}")
   note = user.notes.filter_by(title=date_enc, is_date=True).first()
 
   if not note:

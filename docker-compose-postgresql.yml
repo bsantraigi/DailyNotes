@@ -8,5 +8,7 @@ services:
             - 5000:5000
         volumes:
             - /acheron/AppData/dailynotes:/app/config
+            # For debugging only!
+            # - ./app:/app/app
         env_file: .env
 
