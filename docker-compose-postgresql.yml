@@ -11,4 +11,4 @@ services:
             # For debugging only!
             # - ./app:/app/app
         env_file: .env
-
+        restart: always
